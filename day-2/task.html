@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        :root {
+            --text-color: #fff;
+            --backgroung-nav-color: #555372;
+            --text-hover-color: #a5ff44
+        }
+
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: 450ms;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            font-size: 1rem;
+            height: fit-content;
+            min-height: 100vh;
+        }
+
+        .main {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-content: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            background: var(--backgroung-nav-color);
+        }
+
+        .main .logo:hover {
+            color: rgb(152, 253, 51);
+        }
+
+        .main .option {
+            text-align: right;
+
+        }
+
+        .option ul {
+            display: inline-flex;
+            list-style: none;
+        }
+
+        .option ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-right: 25px;
+            padding: 5px;
+            border-bottom: 1px solid #5e5e5e;
+            border-radius: 2px;
+            font-weight: 300;
+        }
+
+        .option ul li a:hover {
+            border-bottom: 1px solid;
+            color: var(--text-hover-color);
+            background-color: #858585;
+
+        }
+
+        .heading {
+
+            background-image: linear-gradient(to top left, #8673a6, #8d619f, #7b709e);
+            background-repeat: no-repeat;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+            height: fit-content;
+            align-items: center;
+            padding: 3rem 0;
+        }
+
+        .userPhoto img {
+            border-radius: 50%;
+            height: 25rem;
+            width: 25rem;
+            box-shadow: 0 0 20px 3px #000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="main">
+            <div class="logo">
+                <h1>Navigation</h1>
+            </div>
+            <div class="option">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="heading">
+            <div class="userInfo">
+                <p>Hello , My Name is</p>
+                <br>
+                <h1>Sandip Chavda</h1>
+                <h4>Web Developer </h4>
+                <p>📞 +91 1234567890 <br>📧 contact@gmail.com</p>
+            </div>
+            <div class="userPhoto">
+                <img class="image" src="Annotation 2023-12-19 114120.png" alt="logo">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

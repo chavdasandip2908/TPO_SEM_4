@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .main {
+            width: fit-content;
+            height: fit-content;
+            padding: 20px;
+            margin: 100px auto;
+            text-align: center;
+            background-color: #e7dcdc;
+        }
+
+        .body {
+            background-color: #e6d0d0;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+        }
+
+        .body input {
+            margin: 5px 0;
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+            padding: 3px 5px;
+        }
+
+        .btns>button {
+            background-image: linear-gradient(to left top, #df9e9e, #fff, #df9e9e);
+            border: none;
+            padding: 5px 15px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form action="factorial.html" method="get" onsubmit="return formSubmitFun()">
+            <div class="heading">
+                <h1>Login</h1>
+            </div>
+            <div class="body">
+                <label for="name">Name : </label>
+                <input type="text" id="name" placeholder="Enter your Name"><br>
+
+                <label for="pass">Password : </label>
+                <input type="password" id="pass" placeholder="Enter your password"><br>
+
+                <label for="repass">Re-Type : </label>
+                <input type="password" id="repass" placeholder="Re-Enter your password"><br>
+            </div>
+
+            <div class="btns">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        var pass = document.getElementById("pass");
+        var repass = document.getElementById("repass");
+
+        function formSubmitFun() {
+            if (pass.value == repass.value && pass.value != "" && repass.value != "") {
+                return true;
+            }
+            alert("Enter Valid Password !")
+            return false;
+        }
+    </script>
+</body>
+
+</html>

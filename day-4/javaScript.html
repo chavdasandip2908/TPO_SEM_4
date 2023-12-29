@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascrip Task</title>
+</head>
+
+<body>
+    <script>
+        var a1 = 10, a2 = 20;
+      //  var ans = add(a1, a2);
+        var ans = mul(a1, a2);
+        console.log(ans);
+
+        function add(n1, n2) {
+            return n1 + n2;
+        }
+
+        function mul(n1, n2) {
+            return n1 * n2;
+        }
+
+        // check number is odd or even 
+        function checkOddEven(n) {
+            if (n % 2 == 0) {
+                return "Even";
+            }
+            else if (n % 2 == 1) {
+                return "Odd";
+            }
+            else {
+                return "Zero";
+            }
+        }
+        // check number is positive or negative or zero
+        function checkPositive(n) {
+            if (n < 0) {
+                return "Negative";
+            }
+            else if (n > 0) {
+                return "Positive";
+            }
+            else {
+                return "Zero";
+            }
+        }
+        // Swap two variable 
+        var num1 = 10; num2 = 20;
+        function swapNum() {
+            var temp = num1;
+            num1 = num2;
+            num2 = temp;
+            console.log(num1)
+            console.log(num2)
+            return 0;
+        }
+    </script>
+</body>
+
+</html>

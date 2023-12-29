@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .container {
+            background: rgba(75, 196, 113, 0.8);
+            width: 100px;
+            height: 100px;
+        }
+
+        #div1 {
+            position: relative;
+            animation: Demo 10s infinite;
+        }
+
+        #div2 {
+            position: relative;
+            animation: Demo 15s infinite;
+        }
+
+        #div3 {
+            position: relative;
+            animation: Demo 15s infinite;
+        }
+
+        @keyframes Demo {
+            0% {
+                top: 0px;
+                left: 0px;
+                background: #4c2727;
+     
+                transform: rotate(0deg);
+            }
+
+            25% {
+                top: 0px;
+                left: 120px;
+                transform: rotate('30deg');
+                background: #ce0303;
+                transform: rotate(90deg);
+            }
+
+            50% {
+                top: 120px;
+                left: 120px;
+                transform: rotate(180deg);
+                background: #3a2f75;
+            }
+
+            75% {
+                top: 120px;
+                left: 0px;
+                background: #22b9eb;
+                transform: rotate(270deg);
+            }
+
+            100% {
+                top: 0px;
+                left: 0px;
+                transform: rotate('0deg');
+                background: #cc18ba;
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="div1"></div>
+    <div class="container" id="div2"></div>
+    <div class="container" id="div3"></div>
+</body>
+
+</html>

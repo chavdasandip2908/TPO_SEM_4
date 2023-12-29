@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested List</title>
+
+    <style>
+        * {
+            transition: all 1s;
+        }
+
+        ul#main>li>ul>li {
+            display: none;
+            color: red;
+        }
+
+        ul#main>li>ul>li>ul>li {
+            display: none;
+            color: green;
+        }
+
+        ul#main>li>ul>li:hover>ul>li {
+            display: list-item;
+
+        }
+
+        ul#main>li:hover>ul>li {
+            display: list-item;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="main">
+        <li>Google
+            <ul>
+                <li>Gmail
+                    <ul>
+                        <li>SignUp</li>
+                        <li>SignIn</li>
+                    </ul>
+                </li>
+                <li>Yahoo</li>
+                <li>Gdrive</li>
+                <li>Gmap</li>
+            </ul>
+        </li>
+        <li>FaceBook</li>
+        <li>Microsoft</li>
+        <li>Amazon</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table </title>
+    <style>
+        .main {
+            width: fit-content;
+            height: fit-content;
+            padding: 20px;
+            margin: 100px auto;
+            text-align: center;
+            background-color: #e7dcdc;
+        }
+
+        .input {
+            background-color: #e6d0d0;
+            padding: 10px 2px;
+            margin-bottom: 10px;
+        }
+
+        .btns {
+            margin: 5px 0;
+        }
+
+        .answer-fields {
+            margin-top: 15px;
+        }
+
+        .btn {
+            background-image: linear-gradient(to left top, #df9e9e, #fff, #df9e9e);
+            border: none;
+            padding: 5px 15px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="heading">
+            <h1>N Number table</h1>
+        </div>
+        <div class="input">
+            <label for="number">Number : </label>
+            <input type="number" id="number">
+        </div>
+        <div class="btns">
+            <button class="btn" onclick="hollNumber()">Click Me</button>
+        </div>
+        <div class="answer-fields">
+            <label for="answer">Answer : </label><br>
+
+            <textarea name="answer" id="answer" cols="15" rows="11" disabled></textarea>
+        </div>
+    </div>
+    <script>
+        var numberEle = document.getElementById("number");
+        var answerEle = document.getElementById("answer");
+
+        function hollNumber() {
+            var str = ""
+            for (let i = 1; i <= 10; i++) {
+                //<!-- str = str + numberEle.value  i + " "; -->
+                str += `${numberEle.value} x ${i} = ${numberEle.value * i} \n`
+            }
+            answerEle.value = str;
+        }
+    </script>
+</body>
+
+</html>

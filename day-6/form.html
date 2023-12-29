@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="">
+    <style>
+        .main {
+            border: 1px solid #000;
+            width: 30%;
+            padding: 15px;
+            margin: auto;
+            border-radius: 3px;
+
+        }
+
+        .inputFiled {
+            width: 98%;
+        }
+
+        .btn {
+            width: 100%;
+            border: none;
+            border-radius: 2px;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        select,
+        .inputFiled {
+            padding: 4px 1px;
+        }
+
+        .btn-group {
+            text-align: right;
+        }
+
+        .input-field input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 align="center">Registration Form</h1>
+        <br>
+        <form action="#" method="get" onsubmit="return regiterFunction()">
+            <div class="input-field">
+                <label for="fname">First Name : </label>
+                <br>
+                <input placeholder="enter your first name" class="inputFiled" type="text" name="fname" id="fname">
+                <br><br>
+            </div>
+            <div class="input-field">
+
+                <label for="lname">Last Name : </label>
+                <br>
+                <input placeholder="enter your last name" class="inputFiled" type="text" name="lname" id="lname">
+                <br><br>
+            </div>
+            <div class="input-field">
+
+                <label for="email">Email : </label>
+                <br>
+                <input placeholder="enter your email" class="inputFiled" type="email" name="email" id="email">
+                <br><br>
+            </div>
+            <div class="input-field">
+                <label for="password">Password : </label>
+                <br>
+                <input placeholder="enter your password" class="inputFiled" type="password" name="password"
+                    id="password">
+                <br><br>
+            </div>
+            <div class="input-field">
+                <label for="number">Number : </label>
+                <br>
+                <input placeholder="enter your number" class="inputFiled" type="number" name="number" id="number">
+                <br><br>
+            </div>
+            <div class="input-field">
+                <label for="gender">Gender : </label><br>
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="other">
+                <label for="other">Other</label>
+                <br><br>
+            </div>
+            <div class="input-field">
+                <label for="dob">DOB : </label>
+                <br>
+                <input class="inputFiled" type="date" name="dob" id="dob">
+                <br><br>
+            </div>
+            <div class="input-field">
+                <label for="address">Address : </label>
+                <br>
+                <textarea placeholder="enter your address" class="inputFiled" name="address" id="address" cols="30"
+                    rows="3"></textarea>
+                <br><br>
+            </div>
+            <div class="input-field">
+                <label for="pincode">Pin Code : </label>
+                <br>
+                <input placeholder="enter your pincode" class="inputFiled" type="number" name="pincode" id="pincode"
+                    min="000001" max="999999">
+                <br><br>
+            </div>
+            <div class="input-field">
+                <label for="country">Country : </label>
+                <br>
+                <select name="country" id="country">
+                    <option value="select">select</option>
+                    <option value="bcd">bcd</option>
+                    <option value="xyz">xyz</option>
+                    <option value="hello">hello</option>
+                    <option value="amd">amd</option>
+                    <option value="btd">btd</option>
+                </select>
+                <br><br>
+            </div>
+            <div class="input-field">
+                <label for="hobbies">Hobbies : </label><br>
+                <input type="checkbox" name="hobbie" id="cricket">
+                <label for="cricket">Cricket</label>
+                <input type="checkbox" name="hobbie" id="reading">
+                <label for="reading">Reading</label>
+                <input type="checkbox" name="hobbie" id="singing">
+                <label for="singing">Singing</label>
+                <br>
+                <input type="checkbox" name="hobbie" id="otherHoddies">
+                <label for="otherHoddies">Other :</label>
+                <input type="text" id="otherHoddies">
+                <br><br>
+            </div>
+            <div class="input-field">
+                <label for="qualification">Qualification : </label>
+                <br>
+                <input placeholder="enter your qualification" class="inputFiled" type="text" name="qualification"
+                    id="qualification">
+                <br><br>
+            </div>
+            <div class="btn-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+        <div id="error-field">
+
+        </div>
+    </div>
+</body>
+<script>
+    var fname = document.getElementById("fname");
+    var lname = document.getElementById("lname");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    var number = document.getElementById("number");
+    var gender = document.getElementsByName("gender");
+    var dob = document.getElementById("dob");
+    var address = document.getElementById("address");
+    var pincode = document.getElementById("pincode");
+    var country = document.getElementById("country");
+    var hobbie = document.getElementsByName("hobbie");
+    var errorField = document.getElementById("error-field");
+    var qualification = document.getElementById("qualification");
+
+    function fnameValidation() {
+        if (fname.value == '') {
+            errorField.innerText += "First Name Field not Valid\n";
+            console.log("First Name Field not Valid");
+            return false;
+        }
+        return true;
+    }
+
+    function lnameValidation() {
+        if (lname.value == '') {
+            errorField.innerText += "Last Name Field not Valid\n";
+            console.log("Last Name Field not Valid");
+            return false;
+        }
+        return true;
+
+    }
+
+    function emailValidation() {
+        if (email.value == '') {
+            errorField.innerText += "Email Field not Valid\n";
+            console.log("Email Field not Valid");
+            return false;
+        }
+        return true;
+    }
+
+    function passwordValidation() {
+        if (password.value == '') {
+            errorField.innerText += "Password Field not Valid\n";
+            console.log("Password Field not Valid");
+            return false;
+        }
+        return true;
+    }
+
+    function numberValidation() {
+        if (number.value == '' || typeof (parseInt(number.value)) != 'number') {
+            errorField.innerText += "Number Field not Valid\n";
+            console.log("Number Field not Valid");
+            return false;
+        }
+        return true;
+    }
+
+    function genderValidation() {
+        var count = 0;
+        gender.forEach(e => {
+            if (e.checked) {
+                count++;
+            }
+        });
+        if (count == 0) {
+            errorField.innerText += "Plese Select Gender\n";
+            console.log("Plese Select Gender")
+            return false;
+        }
+        return true;
+    }
+
+    function dobValidation() {
+        if (dob.value == '') {
+            errorField.innerText += "Date Field not Valid\n";
+            console.log("Date Field not Valid");
+            return false;
+        }
+        return true;
+    }
+
+    function addressValidation() {
+        if (address.value == '') {
+            errorField.innerText += "Address Field not Valid\n";
+            console.log("Address Field not Valid");
+            return false;
+        }
+        return true;
+
+    }
+
+    function pincodeValidation() {
+        if (pincode.value == '') {
+            errorField.innerText += "pincode Field not Valid\n";
+            console.log("pincode Field not Valid");
+            return false;
+
+        }
+        return true;
+    }
+
+    function countryValidation() {
+        if (pincode.value == '' || country.value == 'select') {
+            errorField.innerText += "country Field not Valid\n";
+            console.log("country Field not Valid");
+            return false;
+
+        }
+        return true;
+    }
+
+    function hobbiesValidation() {
+        var count = 0;
+        hobbie.forEach(e => {
+            if (e.checked) {
+                count++;
+            }
+        });
+        if (count == 0) {
+            errorField.innerText += "Plese Select hobbie\n";
+            console.log("Plese Select hobbie")
+            return false;
+        }
+        return true;
+    }
+
+    function qualificationValidation() {
+        if (qualification.value == '') {
+            errorField.innerText += "qualification Field not Valid\n";
+            console.log("qualification Field not Valid");
+            return false;
+        }
+        return true;
+    }
+
+
+
+    function regiterFunction() {
+        errorField.innerText = "";
+        var fnameRes = fnameValidation();
+        var lnameRes = lnameValidation();
+        var emailRes = emailValidation();
+        var passRes = passwordValidation();
+        var numRes = numberValidation();
+        var genderRes = genderValidation();
+        var dobRes = dobValidation();
+        var addRes = addressValidation();
+        var pinRes = pincodeValidation();
+        var country = countryValidation();
+        var hobRes = hobbiesValidation();
+        var quaRes = qualificationValidation();
+
+        return (fnameRes && lnameRes && emailRes && passRes && numRes && genderRes && dobRes && addRes && pinRes && country && quaRes && hobRes);
+
+    }
+</script>
+
+</html>

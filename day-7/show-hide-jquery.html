@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="../src/jQuery/code.jquery.com_jquery-3.7.1.js"></script>
+    <style>
+        #p {
+            background: #969a98;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="containner">
+            <h2>Click on the button to see magic!</h2><br>
+            <p id="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam amet quas autem recusandae
+                officiis, suscipit ratione dolor! Deserunt tenetur, sed ullam, nemo atque velit accusantium, tempora
+                quis totam adipisci dolor.</p>
+            <button id="show">Show</button>
+            <button id="hide">Hide</button>
+            <button id="toggle">Toggle</button>
+            <hr>
+            <button id="fadeIn">fadeIn</button>
+            <button id="fadeOut">fadeOut</button>
+            <button id="fadeToggle">fadeToggle</button>
+            <button id="fadeTo">fadeTo</button>
+            <hr>
+            <button id="slideDown">slideDown</button>
+            <button id="slideUp">slideUp</button>
+            <button id="slideToggle">slideToggle</button>
+            <hr>
+            <button id="animate">animate</button>
+            <button id="stopAnimate">Stop Animate</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            //show and hide and toggle
+            $("#show").click(function () {
+                $('#p').show();
+            });
+            $("#hide").click(function () {
+                $('#p').hide();
+            });
+            $("#toggle").click(function () {
+                $('#p').toggle();
+            });
+
+            //fadeIn , fadeOut and fadeToggle
+            $("#fadeIn").click(function () {
+                $('#p').fadeIn();
+            });
+            $("#fadeOut").click(function () {
+                $('#p').fadeOut();
+            });
+            $("#fadeToggle").click(function () {
+                $('#p').fadeToggle();
+            });
+            $("#fadeTo").click(function () {
+                $('#p').fadeTo("slow", 0.15);
+            });
+
+            //slideDown , slideUp and slideToggle
+            $("#slideDown").click(function () {
+                $('#p').slideDown();
+            });
+            $("#slideUp").click(function () {
+                $('#p').slideUp();
+            });
+            $("#slideToggle").click(function () {
+                $('#p').slideToggle();
+            });
+
+            //animate
+            $("#animate").click(function () {
+                $('#p').animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    //height: '150px',
+                    width: '150px'
+                }, 3000);
+            });
+
+            //stopAnimate
+            $("#stopAnimate").click(function () {
+                $('#p').stop();
+            });
+
+        })
+    </script>
+</body>
+
+</html>

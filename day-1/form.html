@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            background-image: linear-gradient(#5183e3, #6590e3);
+        }
+
+        .main {
+            border: 1px solid #000;
+            width: 30%;
+            padding: 15px;
+            margin: auto;
+            border-radius: 3px;
+        }
+
+        .inputFiled {
+            width: 98%;
+        }
+
+        .btn {
+            width: 100%;
+            border: none;
+            border-radius: 2px;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        select,
+        .inputFiled {
+            padding: 4px 1px;
+        }
+
+        .btn-group {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 align="center">Registration Form</h1>
+        <br>
+        <form action="login.html" method="get" onsubmit="return regiterFunction()">
+            <label for="fname">First Name : </label>
+            <br>
+            <input placeholder="enter your first name" class="inputFiled" type="text" name="fname" id="fname">
+            <br><br>
+
+            <label for="lname">Last Name : </label>
+            <br>
+            <input placeholder="enter your last name" class="inputFiled" type="text" name="lname" id="lname">
+            <br><br>
+
+            <label for="email">Email : </label>
+            <br>
+            <input placeholder="enter your email" class="inputFiled" type="email" name="email" id="email">
+            <br><br>
+
+            <label for="password">Password : </label>
+            <br>
+            <input placeholder="enter your password" class="inputFiled" type="password" name="password" id="password">
+            <br><br>
+
+            <label for="number">Number : </label>
+            <br>
+            <input placeholder="enter your number" class="inputFiled" type="number" name="number" id="number">
+            <br><br>
+
+            <label for="gender">Gender : </label><br>
+            <input type="radio" name="gender" id="male" checked>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other">
+            <label for="other">Other</label>
+            <br><br>
+
+            <label for="dob">DOB : </label>
+            <br>
+            <input class="inputFiled" type="date" name="dob" id="dob">
+            <br><br>
+
+            <label for="address">Address : </label>
+            <br>
+            <textarea placeholder="enter your address" class="inputFiled" name="address" id="address" cols="30"
+                rows="3"></textarea>
+            <br><br>
+
+            <label for="pincode">Pin Code : </label>
+            <br>
+            <input placeholder="enter your pincode" class="inputFiled" type="number" name="pincode" id="pincode"
+                min="000001" max="999999">
+            <br><br>
+
+            <label for="country">Country : </label>
+            <br>
+            <select name="country" id="country">
+                <option value="abc">abc</option>
+                <option value="bcd">bcd</option>
+                <option value="xyz">xyz</option>
+                <option value="hello">hello</option>
+                <option value="amd">amd</option>
+                <option value="btd">btd</option>
+            </select>
+            <br><br>
+
+            <label for="hobbies">Hobbies : </label><br>
+            <input type="checkbox" name="cars" id="cricket">
+            <label for="cricket">Cricket</label>
+            <input type="checkbox" name="cars" id="reading">
+            <label for="reading">Reading</label>
+            <input type="checkbox" name="cars" id="singing">
+            <label for="singing">Singing</label>
+            <br>
+            <input type="checkbox" name="cars" id="otherHoddies">
+            <label for="otherHoddies">Other :</label>
+            <input type="text" id="otherHoddies">
+            <br><br>
+
+            <label for="qualification">Qualification : </label>
+            <br>
+            <input placeholder="enter your qualification" class="inputFiled" type="text" name="qualification"
+                id="qualification">
+            <br><br>
+            <div class="btn-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    var fname = document.getElementById("fname");
+    var lname = document.getElementById("lname");
+    var email = document.getElementById("email");
+
+    function regiterFunction() {
+        var fullName = fname.value + " " + lname.value;
+
+        localStorage.removeItem("fullname");
+        localStorage.removeItem("email");
+
+        localStorage.setItem("fullname", fullName);
+        localStorage.setItem("email", email.value);
+        return true;
+    }
+</script>
+
+</html>
+
+<!-- Question -->
+<!-- 
+    html and html5 me konsa tag support nahi karta 
+    footer tag
+    explain about embbed tag
+ -->

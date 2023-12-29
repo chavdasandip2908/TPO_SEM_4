@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square&Root</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .main {
+            width: fit-content;
+            height: fit-content;
+            padding: 20px;
+            margin: 100px auto;
+            text-align: center;
+            background-color: #e7dcdc;
+        }
+
+        .body {
+            background-color: #e6d0d0;
+            padding: 10px 2px;
+            margin-bottom: 10px;
+        }
+
+        .operation {
+            margin: 5px 0;
+        }
+
+        #answer {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="heading">
+            <h1>Calculater</h1>
+        </div>
+        <div class="body">
+            <label for="fistVal">Number</label><br>
+            <input type="number" name="fistVal" id="fistVal"><br>
+        </div>
+        <div class="operation">
+            <button class="btn" onclick="cube()">X<sup>3</sup></button>
+            <button class="btn" onclick="square()">X<sup>2</sup></button>
+            <button class="btn" onclick="squareRoot()">&radic;X</button>
+            <button class="btn" onclick="cubeRoot()">&#8731;X</button>
+        </div>
+        <div id="answer">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    var fistEle = document.getElementById("fistVal");
+    var ansEle = document.getElementById("answer");
+
+    function GetValue() {
+        return parseInt(fistEle.value);
+    }
+
+    function square() {
+        var number = GetValue();
+        if (number) ansEle.innerText = `Square is : ${number * number}`;
+    }
+    function squareRoot() {
+        var number = GetValue();
+        if (number) ansEle.innerText = `Root is : ${Math.sqrt(number)}`;
+    }
+    function cube() {
+        var number = GetValue();
+        if (number) ansEle.innerText = `Cube is : ${number * number * number}`;
+    }
+    function cubeRoot() {
+        var number = GetValue();
+        if (number) ansEle.innerText = `Cube is : ${Math.cbrt(number)}`;
+    }
+
+</script>
+
+
+</html>

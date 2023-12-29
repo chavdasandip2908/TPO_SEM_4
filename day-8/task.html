@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <script src="../src/jQuery/code.jquery.com_jquery-3.7.1.js"></script>
+    <style>
+        img {
+            height: 300px;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="oprater">
+            <button id="admin">Admin</button>
+            <button id="home">Home</button>
+            <button id="contact">Contact</button>
+        </div>
+        <div id="response">
+            <img id="adminImage" src="../src/image/pexels-christina-morillo-1181243.jpg" alt="">
+            <img id="homeImage" src="../src/image/pexels-thisisengineering-3861972.jpg" alt="">
+            <img id="contactImage" src="../src/image/pexels-christina-morillo-1181269.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            
+            $("#adminImage").hide();
+            $("#homeImage").hide();
+            $("#contactImage").hide();
+
+
+            $("#admin").click(function () {
+                $("#adminImage").slideDown("slow");
+                $("#homeImage").hide();
+                $("#contactImage").hide();
+            });
+
+            $("#home").click(function () {
+                $("#homeImage").slideDown("slow");
+                $("#adminImage").hide();
+                $("#contactImage").hide();
+            });
+
+            $("#contact").click(function () {
+                $("#contactImage").slideDown("slow");
+                $("#adminImage").hide();
+                $("#homeImage").hide();
+            });
+
+        });
+    </script>
+</body>
+
+</html>

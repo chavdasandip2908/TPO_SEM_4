@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS</title>
+    <style>
+        #main {
+            height: 250px;
+            width: 250px;
+            border: 1px solid black;
+            background: #ebb1b1;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello , <span id="name">Name</span></h1>
+    <div id="main"></div>
+<br>
+    <button onclick="alert('this is Alert')">alert</button>
+    <button onclick="changeTxColor()">Change Text Color</button>
+    <button onclick="changeBG()">Change Bg Color</button>
+
+</body>
+<script>
+    var fullName;
+    getName();
+    getAge();
+    function getName() {
+        fullName = prompt("Enter Your Full Name : ");
+        if(fullName)document.getElementById("name").innerText = fullName;
+        else getName();
+    }
+
+    function getAge() {
+        if (confirm("are you under age")) {
+            document.getElementById("main").innerHTML += ` ${fullName} is Under Age`
+        }
+        else {
+            document.getElementById("main").innerHTML += ` ${fullName} is Under Age`
+        }
+    }
+
+    function changeBG() {
+        document.body.style.backgroundColor = prompt("enter BG color");
+    }
+    function changeTxColor() {
+        document.body.style.color = prompt("enter text color");
+    }
+</script>
+
+</html>

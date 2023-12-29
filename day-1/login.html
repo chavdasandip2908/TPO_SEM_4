@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="">
+    <style>
+        .main {
+            border: 1px solid #000;
+            width: 30%;
+            padding: 15px;
+            margin: auto;
+            border-radius: 3px;
+        }
+
+        .inputFiled {
+            width: 98%;
+        }
+
+        .btn {
+            width: 100%;
+            border: none;
+            border-radius: 2px;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        select,
+        .inputFiled {
+            padding: 4px 1px;
+        }
+
+        .btn-group {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 align="center">Login Form</h1>
+        <br>
+        <form action="home.html" method="get">
+            <label for="email">Email : </label>
+            <br>
+            <input placeholder="enter your email" class="inputFiled" type="email" name="email" id="email">
+            <br><br>
+
+            <label for="password">Password : </label>
+            <br>
+            <input placeholder="enter your password" class="inputFiled" type="password" name="password" id="password">
+            <br><br>
+
+
+            <div class="btn-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        var email = document.getElementById("email");
+        var emailId = localStorage.getItem("email");
+        email.value = emailId;
+    </script>
+</body>
+
+</html>

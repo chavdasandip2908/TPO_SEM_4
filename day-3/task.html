@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .main {
+            width: fit-content;
+            height: fit-content;
+            padding: 20px;
+            margin: 100px auto;
+            text-align: center;
+            background-color: #e7dcdc;
+        }
+
+        .body {
+            background-color: #e6d0d0;
+            padding: 10px 2px;
+            margin-bottom: 10px;
+        }
+
+        .operation {
+            margin: 5px 0;
+        }
+
+        #answer {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="heading">
+            <h1>Calculater</h1>
+        </div>
+        <div class="body">
+            <label for="fistVal">First value</label><br>
+            <input type="number" name="fistVal" id="fistVal"><br><br>
+            <label for="fistVal">Second value</label><br>
+            <input type="number" name="secondVal" id="secondVal">
+        </div>
+        <div class="operation">
+            <button id="add" class="btn" onclick="add()">+</button>
+            <button id="min" class="btn" onclick="min()">-</button>
+            <button id="mul" class="btn" onclick="mul()">X</button>
+            <button id="div" class="btn" onclick="div()">/</button>
+        </div>
+        <div id="answer">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    var fistEle = document.getElementById("fistVal");
+    var secondEle = document.getElementById("secondVal");
+    var ansEle = document.getElementById("answer");
+
+    function add() {
+        var fistVal = parseInt(fistEle.value);
+        var secondVal = parseInt(secondEle.value);
+        if (fistVal && secondVal) ansEle.innerText = `Addition is : ${fistVal + secondVal}`;
+    }
+
+    function min() {
+        var fistVal = parseInt(fistEle.value);
+        var secondVal = parseInt(secondEle.value);
+        if (fistVal && secondVal) ansEle.innerText = `Subtraction is : ${fistVal - secondVal}`;
+    }
+
+    function mul() {
+        var fistVal = parseInt(fistEle.value);
+        var secondVal = parseInt(secondEle.value);
+        if (fistVal && secondVal) ansEle.innerText = `Multiplicationm is : ${fistVal * secondVal}`;
+    }
+
+    function div() {
+        var fistVal = parseInt(fistEle.value);
+        var secondVal = parseInt(secondEle.value);
+        if (fistVal && secondVal) ansEle.innerText = `DiviSion is : ${fistVal / secondVal}`;
+    }
+</script>
+
+
+</html>

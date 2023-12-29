@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clint Side Validation</title>
+    <style>
+        .main {
+            display: flex;
+            background-color: #7cb4b4;
+            width: fit-content;
+            padding: 0px 20px;
+            padding-bottom: 20px;
+            text-align: center;
+            margin: auto;
+            margin-top: 25px;
+            border-radius: 3px;
+        }
+
+        .errorEle {
+            font-size: 12px;
+            color: #d30000;
+            margin-top: 2px;
+            display: none;
+        }
+
+        .input-field {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .input-field input {
+            width: 300px;
+            padding: 5px;
+        }
+
+        .sub-btn {
+            color: #fff;
+            background: #5e5e2d;
+            background-image: linear-gradient(to top left, #2d5e2fb0, #53530f, #2d5e2fb9);
+            border: none;
+            width: 100%;
+            padding: 6px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form action="#">
+            <div class="input-heading">
+                <h1>Registration</h1>
+            </div>
+
+            <div class="input-field">
+                <label for="fname">First Name: </label><br />
+                <input type="text" id="fname" name="fname" onblur="fnameValidation()">
+                <div class="errorEle" id="fname-err">this is error field</div>
+            </div>
+            <div class="input-field">
+                <label for="lname">Last Name: </label><br />
+                <input type="text" id="lname" name="lname" onblur="lnameValidation()">
+                <div class="errorEle" id="lname-err">this is error field</div>
+            </div>
+            <div class="input-field ">
+                <label for="email">Email: </label><br />
+                <input type="email" id="email" name="email" onblur="emailValidation()">
+                <div class="errorEle" id="email-err">this is error field</div>
+            </div>
+
+            <div class="input-field ">
+                <label for="mobile">Mobile: </label><br />
+                <input type="number" id="mobile" name="mobile" onblur="mobileValidation()">
+                <div class="errorEle" id="mobile-err">this is error field</div>
+            </div>
+
+            <div class="input-field">
+                <label for="password">Password: </label><br />
+                <input type="password" id="pass" name="password" onblur="passValidation()">
+                <div class="errorEle" id="pass-err">this is error field</div>
+            </div>
+
+            <div class="input-field">
+                <label for="con_pass">Confirm Password: </label><br />
+                <input type="password" id="confirm_password" name="con_pass">
+                <div class="errorEle" id="con-pass-err">this is error field</div>
+            </div>
+            <br />
+            <button class="sub-btn" type="submit" onclick="return validateForm()">Submit</button>
+
+        </form>
+    </div>
+    <script>
+        var test;
+        function errorHandle(ele, meg) {
+            if (meg == "") {
+                ele.style.display = "none";
+            }
+            else {
+                ele.style.display = "block";
+                ele.innerText = meg;
+            }
+            return 0;
+        }
+        function fnameValidation() {
+            let x = document.getElementById("fname").value;
+            let errorEle = document.getElementById('fname-err');
+
+            var reg = /^[A-Za-z]+$/;
+            if (x == "") {
+                errorHandle(errorEle, "this is field blank");
+            }
+            else if (!reg.test(x)) {
+                errorHandle(errorEle, "this is not field");
+            }
+            else {
+                errorHandle(errorEle, "");
+                return true;
+            }
+            return false;
+        }
+
+        function lnameValidation() {
+            let x = document.getElementById("lname").value;
+            let errorEle = document.getElementById('lname-err');
+
+            var reg = /^[A-Za-z]+$/;
+            if (x == "") {
+                errorHandle(errorEle, "this is field blank");
+            }
+            else if (!reg.test(x)) {
+                errorHandle(errorEle, "this is not field");
+            }
+            else {
+                errorHandle(errorEle, "");
+                return true;
+            }
+            return false;
+        }
+
+        function emailValidation() {
+            let x = document.getElementById("email").value;
+            let errorEle = document.getElementById('email-err');
+
+            var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (x == "") {
+                errorHandle(errorEle, "this is field blank");
+            }
+            else if (!reg.test(x)) {
+                errorHandle(errorEle, "this is not field");
+            }
+            else {
+                errorHandle(errorEle, "");
+                return true;
+            }
+            return false;
+        }
+        function mobileValidation() {
+            let x = document.getElementById("mobile").value;
+            let errorEle = document.getElementById('mobile-err');
+
+            var reg = /^\d{10}$/;
+            if (x == "") {
+                errorHandle(errorEle, "this is field blank");
+            }
+            else if (!reg.test(x)) {
+                errorHandle(errorEle, "this is not field");
+            }
+            else {
+                errorHandle(errorEle, "");
+                return true;
+            }
+            return false;
+        }
+
+        function passValidation() {
+            let X = document.getElementById("password").value;
+            let errorEle = document.getElementById('pass-err');
+
+            // here create ragular expression and store in reg variable and regex validate condition  
+            var reg = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[~!@#$%^&]).{8,32}$/;
+
+            if (x == "") {
+                errorHandle(errorEle, "this is field blank");
+            }
+            else if (!reg.test(x)) {
+                errorHandle(errorEle, "this is not field");
+            }
+
+            // if (l != u) {
+            //  errorHandle(errorEle, "Passwords do not match.");
+            //  return false;
+            //}  
+            else {
+                errorHandle(errorEle, '');
+            }
+        }
+
+        function validateForm() {
+
+        }
+    </script>
+</body>
+
+</html>

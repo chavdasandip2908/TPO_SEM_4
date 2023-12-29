@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <style>
+        :root {
+            --text-color: #fff;
+            --backgroung-nav-color: #292929;
+            --text-hover-color: #a5ff44
+        }
+
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: 450ms;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+            background: #a9adcbb4;
+        }
+
+        .main {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-content: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            background: var(--backgroung-nav-color);
+        }
+
+        .main .logo {
+            color: rgb(255, 255, 255);
+            margin-left: 75px;
+        }
+
+        .main .logo:hover {
+            color: rgb(152, 253, 51);
+        }
+
+        .main .option {
+            text-align: right;
+
+        }
+
+        .option ul {
+            display: inline-flex;
+            list-style: none;
+        }
+
+        .option ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-right: 25px;
+            padding: 5px;
+            border-bottom: 1px solid #5e5e5e;
+            border-radius: 2px;
+            font-weight: 300;
+        }
+
+        .option ul li a:hover {
+            border-bottom: 1px solid;
+            color: var(--text-hover-color);
+            background-color: #858585;
+
+        }
+    </style>
+
+    <!-- user Listing style -->
+
+    <style>
+        :root {
+            --height: 22.5vw;
+        }
+
+        .main2 {
+            padding: 10px;
+            display: flex;
+            max-width: 100%;
+            height: fit-content;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .box {
+            width: var(--height);
+            color: #000;
+            background-color: #82918c5c;
+            margin-bottom: 10px;
+            border-radius: 2px;
+            padding: 5px;
+            text-align: center;
+            box-shadow: 0 0 13px 0px #0000006e;
+        }
+
+        .box .box-image {
+            width: var(--height);
+        }
+
+        .box .box-image img {
+            border-radius: 3px;
+            width: var(--height);
+        }
+
+        .box .btns {
+            float: right;
+        }
+
+        .box .btns .btn {
+            background-image: linear-gradient(to top left, #3a660e, #75a14a, #3a660e);
+            color: #fff;
+            padding: 8px 15px;
+            margin: 10px;
+            border: none;
+            border-radius: 3px;
+        }
+    </style>
+    <!-- footer Style -->
+    <style>
+        .main3 {
+            background-color: #292929;
+            color: #fff;
+            width: 100%;
+            height: 350px;
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+        }
+
+
+        .main3 .contactForm form input#email {
+            background-color: transparent;
+            color: #000;
+            border: none;
+            border-bottom: 1px solid #838383;
+        }
+
+        #subbtn {
+            background-color: #3a660e;
+            border: none;
+            padding: 5px 15px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="main">
+            <div class="logo">
+                <h1>Navigation</h1>
+            </div>
+            <div class="option">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Table</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 align="center">Card Listing</h1>
+    <section class="main2">
+
+
+        <div class="box">
+            <div class="box-image"><img src="Annotation 2023-12-21 112637.png" alt="image"></div>
+            <div class="box-heading">
+                <h2>This is Box Model</h2>
+            </div>
+            <div class="box-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut, saepe nobis quia
+                facere sunt. Debitis enim, architecto atque doloribus magni nihil deserunt explicabo veritatis!</div>
+            <div class="btns">
+                <button class="btn">View More ></button>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="box-image"><img src="Annotation 2023-12-21 112637.png" alt="image"></div>
+            <div class="box-heading">
+                <h2>This is Box Model</h2>
+            </div>
+            <div class="box-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut, saepe nobis quia
+                facere sunt. Debitis enim, architecto atque doloribus magni nihil deserunt explicabo veritatis!</div>
+            <div class="btns">
+                <button class="btn">View More ></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-image"><img src="Annotation 2023-12-21 112637.png" alt="image"></div>
+            <div class="box-heading">
+                <h2>This is Box Model</h2>
+            </div>
+            <div class="box-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut, saepe nobis quia
+                facere sunt. Debitis enim, architecto atque doloribus magni nihil deserunt explicabo veritatis!</div>
+            <div class="btns">
+                <button class="btn">View More ></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-image"><img src="Annotation 2023-12-21 112637.png" alt="image"></div>
+            <div class="box-heading">
+                <h2>This is Box Model</h2>
+            </div>
+            <div class="box-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut, saepe nobis quia
+                facere sunt. Debitis enim, architecto atque doloribus magni nihil deserunt explicabo veritatis!</div>
+            <div class="btns">
+                <button class="btn">View More ></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-image"><img src="Annotation 2023-12-21 112637.png" alt="image"></div>
+            <div class="box-heading">
+                <h2>This is Box Model</h2>
+            </div>
+            <div class="box-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut, saepe nobis quia
+                facere sunt. Debitis enim, architecto atque doloribus magni nihil deserunt explicabo veritatis!</div>
+            <div class="btns">
+                <button class="btn">View More ></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-image"><img src="Annotation 2023-12-21 112637.png" alt="image"></div>
+            <div class="box-heading">
+                <h2>This is Box Model</h2>
+            </div>
+            <div class="box-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut, saepe nobis quia
+                facere sunt. Debitis enim, architecto atque doloribus magni nihil deserunt explicabo veritatis!</div>
+            <div class="btns">
+                <button class="btn">View More ></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-image"><img src="Annotation 2023-12-21 112637.png" alt="image"></div>
+            <div class="box-heading">
+                <h2>This is Box Model</h2>
+            </div>
+            <div class="box-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut, saepe nobis quia
+                facere sunt. Debitis enim, architecto atque doloribus magni nihil deserunt explicabo veritatis!</div>
+            <div class="btns">
+                <button class="btn">View More ></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-image"><img src="Annotation 2023-12-21 112637.png" alt="image"></div>
+            <div class="box-heading">
+                <h2>This is Box Model</h2>
+            </div>
+            <div class="box-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut, saepe nobis quia
+                facere sunt. Debitis enim, architecto atque doloribus magni nihil deserunt explicabo veritatis!</div>
+            <div class="btns">
+                <button class="btn">View More ></button>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="main3">
+            <div class="contactInfo">
+                <h3>Contact Information</h3>
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>LinkedIn</p>
+                <p>YouTube</p>
+
+            </div>
+            <div class="support">
+                <h3>Support</h3>
+                <p>Contact Us</p>
+                <p>FAQ</p>
+                <p>Downloads</p>
+                <p>Product Registration</p>
+
+            </div>
+            <div class="furrion">
+                <h3>Furrion</h3>
+                <p>About Furrion</p>
+                <p>Furrion Design</p>
+                <p>NewSroom</p>
+
+            </div>
+            <div class="contactForm">
+                <h3>Contact Form</h3>
+                <form action="#" method="get">
+                    <input type="email" id="email" placeholder="Email"><br><br>
+                    <input type="submit" id="subbtn" value="Send">
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
